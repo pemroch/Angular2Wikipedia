@@ -1,0 +1,6 @@
+<form #searchForm="ngForm">
+    <input name="search" type="email" (keyup)="searchTerm(searchForm)" ngModel required/>
+</form>
+<ul>
+    <li *ngFor="let item of items | async" [routerLink]="['/article', { title: item }]">{{ item }}</li>
+</ul>

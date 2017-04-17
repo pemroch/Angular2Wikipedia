@@ -1,0 +1,8 @@
+<form #createAccountForm="ngForm" (ngSubmit)="onSubmit(createAccountForm)">
+    <input name="email" type="email" (ngModelChange)="error = ''" ngModel required/>
+    <br>
+    <input name="password" type="password" (ngModelChange)="error = ''" ngModel required/>
+    <br>
+    <div>{{ error }}</div>
+    <button type="submit" [disabled]="!createAccountForm.form.valid">Create Account</button>
+</form>

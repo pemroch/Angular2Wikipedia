@@ -1,0 +1,5 @@
+<h2>{{ title }}</h2>
+<p>{{ description }}</p>
+<div *ngFor="let section of sections; let i = index">
+    <div [innerHTML]="section.text" (click)="elementClicked($event, section, i)"></div>
+</div>
